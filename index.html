@@ -9,68 +9,88 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts (Inter used in many modern designs) -->
     <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
 </head>
 
 <body>
     <!-- Navigation Bar -->
-    <header>
-        <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
+    <header class="bg-black">
+        <nav class="flex items-center justify-between p-4 container mx-auto">
             <div class="logo">
-                <img src="images/cool-icon.png" alt="Logo" />
+                <img src="images/cool-icon.png" alt="Logo" class="w-10 h-10">
             </div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="flex space-x-4">
+                <li><a href="#hero" class="text-white hover:underline">Home</a></li>
+                <li><a href="#projects" class="text-white hover:underline">Projects</a></li>
+                <li><a href="#about" class="text-white hover:underline">About</a></li>
+                <li><a href="#contact" class="text-white hover:underline">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="hero" class="relative hero h-screen overflow-hidden">
-        <video autoplay muted loop playsinline poster="images/hero-fallback.png" class="absolute top-0 left-0 w-full h-full object-cover">
+        <video autoplay muted loop playsinline poster="images/hero-fallback.png"
+            class="absolute top-0 left-0 w-full h-full object-cover">
             <source src="images/hero-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <!-- Dark overlay for better text contrast -->
+        <!-- Dark overlay for contrast -->
         <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-            <h1 class="text-4xl md:text-6xl font-bold tracking-wide antialiased drop-shadow-md mb-4">Welcome to My Portfolio</h1>
-            <p class="text-lg md:text-2xl mb-8">Check out my work below</p>
-            <a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300" href="#projects">View Projects</a>
+        <!-- Hero text container with animate-up class -->
+        <div id="hero-text"
+            class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+            <div class="container mx-auto px-4">
+                <div class="hero-content text-left">
+                    <p>Hey there!, I'm-</p>
+                    <h1 class="text-4xl md:text-6xl font-bold tracking-wide antialiased drop-shadow-md mb-4">Joseph Tascona
+                    </h1>
+                    <p id="hero-text-p" class="text-lg md:text-2xl mb-8">Check out my work below</p>
+                    <div class="hero-paragraph">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cumque minima. A tempore ex, debitis quasi adipisci
+                            voluptas mollitia accusamus saepe voluptatem, quas, consectetur est ipsum nesciunt commodi nemo ducimus?</p>
+                    </div>
+                    <a href="mailto:joseph@josephtascona.com"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300">Contact
+                        Me</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl text-black font-semibold tracking-wide antialiased drop-shadow-md text-center mb-12">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card bg-white shadow-lg rounded overflow-hidden">
-                    <img src="images/see-n-say-storymaker.png" alt="Project 1" class="w-full">
-                    <div class="p-4">
-                        <h3 class="text-xl text-black font-semibold mb-2">Project Title</h3>
-                        <p class="text-gray-700 mb-4">A brief description of the project goes here.</p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-blue-600 hover:underline">Live Demo</a>
-                            <a href="#" class="text-blue-600 hover:underline">GitHub</a>
+            <div class="animate-up">
+                <h2 class="text-4xl text-black font-semibold tracking-wide antialiased drop-shadow-md text-center mb-12">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card bg-white shadow-lg rounded overflow-hidden">
+                        <img src="images/see-n-say-storymaker.png" alt="Project 1" class="w-full">
+                        <div class="p-4">
+                            <h3 class="text-xl text-black font-semibold mb-2">Project Title</h3>
+                            <p class="text-gray-700 mb-4">A brief description of the project goes here.</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-600 hover:underline">Live Demo</a>
+                                <a href="#" class="text-blue-600 hover:underline">GitHub</a>
+                            </div>
                         </div>
                     </div>
+                    <!-- Add additional project cards as needed -->
                 </div>
-                <!-- Add additional project cards as needed -->
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about py-16">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <img src="images/emoji_profile_pic.jpg" alt="Your Profile Picture" class="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-8">
-            <div class="about-text">
-                <h2 class="text-4xl font-semibold tracking-wide antialiased drop-shadow-md mb-4">About Me</h2>
-                <p class="text-gray-700">A short bio about your background, your passion for front-end development, and what sets you apart.</p>
+        <div class="container mx-auto px-4">
+            <div class="animate-up flex flex-col items-center text-center">
+                <img src="images/emoji_profile_pic.jpg" alt="Your Profile Picture" class="w-40 h-40 rounded-full mb-6">
+                <div class="about-text">
+                    <h2 class="text-4xl font-semibold tracking-wide antialiased drop-shadow-md mb-4">About Me</h2>
+                    <p class="text-gray-700">A short bio about your background, your passion for front-end development, and what sets you apart.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -78,23 +98,16 @@
     <!-- Contact Section -->
     <section id="contact" class="contact py-16 bg-gray-100">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl text-black font-bold tracking-wide antialiased drop-shadow-md mb-4">Get In Touch</h2>
-            <p class="text-gray-700 mb-8">If you'd like to discuss projects or opportunities, feel free to reach out!</p>
-            <a href="mailto:joseph@josephtascona.com" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300">Email Me</a>
+            <div>
+                <h2 class="text-4xl text-black font-bold tracking-wide antialiased drop-shadow-md mb-4">Get In Touch</h2>
+                <p class="text-gray-700 mb-8">If you'd like to discuss projects or opportunities, feel free to reach out!</p>
+                <a href="mailto:joseph@josephtascona.com" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300">Email Me</a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 Joseph Tascona. All rights reserved.</p>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- JavaScript file for interactions (see below) -->
-    <script src="scripts.js"></script>
-    
     <!-- Social Icons Fixed at Bottom Left -->
-    <div class="fixed bottom-0 left-0 m-4 flex flex-col items-center space-y-2 social-icons">
+    <div class="fixed bottom-0 left-10 m-4 flex flex-col items-center space-y-2 social-icons">
         <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
             <img src="images/github.svg" alt="GitHub" class="w-6 h-6 hover:opacity-75 transition duration-300">
         </a>
@@ -104,15 +117,20 @@
         <!-- Vertical line extending upward -->
         <div class="w-px h-20 bg-blue-600"></div>
     </div>
-
-    <div class="vertical-email fixed bottom-0 right-0 m-4 flex flex-col items-center space-y-2">
+    
+    <div class="vertical-email fixed bottom-0 right-10 m-4 flex flex-col items-center space-y-2">
         <a href="mailto:joseph@josephtascona.com"
-           class="text-blue-600 font-medium tracking-wide transition duration-300 hover:opacity-75"
-           style="writing-mode: vertical-rl;">
+            class="text-blue-600 font-medium tracking-wide transition duration-300 hover:opacity-75"
+            style="writing-mode: vertical-rl;">
             joseph@josephtascona.com
         </a>
         <div class="w-px h-20 bg-blue-600"></div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- JavaScript file for interactions (see below) -->
+    <script src="scripts.js"></script>
 </body>
 
 </html>

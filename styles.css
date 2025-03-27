@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -86,7 +86,7 @@ header {
 }      
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
 }
 
@@ -196,7 +196,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Scroll offset for anchor links due to fixed header */
 .projects, .about, .contact {
     scroll-margin-top: 80px;
 }
@@ -267,4 +266,12 @@ p {
 .vertical-email a {
     margin: 0.5em 0;
     font-size: 0.9em;
+}
+
+.dud {
+    color: #999;
+}
+
+.hero-paragraph {
+    width: 400px;
 }
