@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joseph Tascona – Developer Portfolio</title>
-    <!-- Link to external CSS (see below) -->
-    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts (Inter used in many modern designs) -->
     <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
@@ -15,7 +15,7 @@
 <body>
     <!-- Navigation Bar -->
     <header>
-        <nav class="navbar">
+        <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
             <div class="logo">
                 <img src="images/cool-icon.png" alt="Logo" />
             </div>
@@ -29,64 +29,90 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <video autoplay muted loop playsinline poster="images/hero-fallback.png" class="hero-video">
+    <section id="hero" class="relative hero h-screen overflow-hidden">
+        <video autoplay muted loop playsinline poster="images/hero-fallback.png" class="absolute top-0 left-0 w-full h-full object-cover">
             <source src="images/hero-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Check out my work below</p>
-            <a class="btn" href="#projects">View Projects</a>
+        <!-- Dark overlay for better text contrast -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-wide antialiased drop-shadow-md mb-4">Welcome to My Portfolio</h1>
+            <p class="text-lg md:text-2xl mb-8">Check out my work below</p>
+            <a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300" href="#projects">View Projects</a>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="images/see-n-say-storymaker.png" alt="Project 1" />
-                <div class="project-info">
-                    <h3>Project Title</h3>
-                    <p>A brief description of the project goes here.</p>
-                    <div class="project-links">
-                        <a href="#">Live Demo</a>
-                        <a href="#">GitHub</a>
+    <section id="projects" class="projects py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl text-black font-semibold tracking-wide antialiased drop-shadow-md text-center mb-12">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white shadow-lg rounded overflow-hidden">
+                    <img src="images/see-n-say-storymaker.png" alt="Project 1" class="w-full">
+                    <div class="p-4">
+                        <h3 class="text-xl text-black font-semibold mb-2">Project Title</h3>
+                        <p class="text-gray-700 mb-4">A brief description of the project goes here.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 hover:underline">Live Demo</a>
+                            <a href="#" class="text-blue-600 hover:underline">GitHub</a>
+                        </div>
                     </div>
                 </div>
+                <!-- Add additional project cards as needed -->
             </div>
-            <!-- Add additional project cards as needed -->
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="images/emoji_profile_pic.jpg" alt="Your Profile Picture" />
+    <section id="about" class="about py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <img src="images/emoji_profile_pic.jpg" alt="Your Profile Picture" class="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-8">
             <div class="about-text">
-                <p>
-                    A short bio about your background, your passion for front-end development, and what sets you apart.
-                </p>
+                <h2 class="text-4xl font-semibold tracking-wide antialiased drop-shadow-md mb-4">About Me</h2>
+                <p class="text-gray-700">A short bio about your background, your passion for front-end development, and what sets you apart.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <p>If you'd like to discuss projects or opportunities, feel free to reach out!</p>
-        <a href="mailto:joseph@josephtascona.com" class="btn">Email Me</a>
+    <section id="contact" class="contact py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl text-black font-bold tracking-wide antialiased drop-shadow-md mb-4">Get In Touch</h2>
+            <p class="text-gray-700 mb-8">If you'd like to discuss projects or opportunities, feel free to reach out!</p>
+            <a href="mailto:joseph@josephtascona.com" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300">Email Me</a>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-gray-800 text-white text-center py-4">
         <p>&copy; 2025 Joseph Tascona. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- JavaScript file for interactions (see below) -->
     <script src="scripts.js"></script>
+    
+    <!-- Social Icons Fixed at Bottom Left -->
+    <div class="fixed bottom-0 left-0 m-4 flex flex-col items-center space-y-2 social-icons">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <img src="images/github.svg" alt="GitHub" class="w-6 h-6 hover:opacity-75 transition duration-300">
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+            <img src="images/linkedin.svg" alt="LinkedIn" class="w-6 h-6 hover:opacity-75 transition duration-300">
+        </a>
+        <!-- Vertical line extending upward -->
+        <div class="w-px h-20 bg-blue-600"></div>
+    </div>
+
+    <div class="vertical-email fixed bottom-0 right-0 m-4 flex flex-col items-center space-y-2">
+        <a href="mailto:joseph@josephtascona.com"
+           class="text-blue-600 font-medium tracking-wide transition duration-300 hover:opacity-75"
+           style="writing-mode: vertical-rl;">
+            joseph@josephtascona.com
+        </a>
+        <div class="w-px h-20 bg-blue-600"></div>
+    </div>
 </body>
 
 </html>

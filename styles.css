@@ -6,12 +6,12 @@
 }
 
 :root {
-    --background-color: #000;        /* pure black for main background */
-    --text-color: #fff;                /* white text for clarity */
-    --accent-color: #368eed;          /* blue for accent and links */
-    --header-background: rgba(0, 0, 0, 0.95); /* nearly opaque black for header */
-    --section-background: #111;        /* dark grey for sections to add contrast */
-    --hover-accent: #65afff;          /* lighter blue for hover effects */
+    --background-color: #121212;        /* dark background for better contrast */
+    --text-color: #f0f0f0;                /* off-white text for improved readability */
+    --accent-color: #368eed;             /* blue for accents and links */
+    --header-background: rgba(0, 0, 0, 0.9); /* solid header background */
+    --section-background: #1e1e1e;        /* slightly lighter dark grey for sections */
+    --hover-accent: #65afff;             /* lighter blue for hover effects */
 }
 
 body {
@@ -19,6 +19,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    text-align: center;
 }
 
 /* Links */
@@ -152,6 +153,8 @@ header {
 
 /* About Section */
 .about {
+    background-color: #000; /* black background for high contrast */
+    color: #fff;           /* white text for readability */
     padding: 4rem 2rem;
 }
 
@@ -196,4 +199,72 @@ footer {
 /* Scroll offset for anchor links due to fixed header */
 .projects, .about, .contact {
     scroll-margin-top: 80px;
+}
+
+/* Improved Readability and Contrast */
+
+/* Add subtle text shadows to headings for better legibility */
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Improve paragraph readability */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Enhance hero section text for clear contrast over video backgrounds */
+.hero-content h1,
+.hero-content p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Optional: Increase padding for sections to provide more breathing room */
+.projects,
+.about,
+.contact {
+    padding: 4rem 2rem;
+}
+
+/* Center the About section content */
+.about .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+}
+
+/* Ensure the About text block is centered */
+.about-text {
+    text-align: center;
+}
+
+.about p {
+    color: #fff;
+}
+
+/* Ensure the profile image and text are perfectly centered */
+.about .container img {
+    margin-right: 0 !important;
+}
+
+.social-icons {
+    margin-bottom: 0em !important;
+}
+
+.social-icons img {
+    filter: invert(32%) sepia(86%) saturate(5610%) hue-rotate(211deg) brightness(101%) contrast(101%);
+}
+
+.social-icons a {
+    margin: 0.5em 0 !important;
+}
+
+.vertical-email {
+    margin-bottom: 0em !important;
+}
+
+.vertical-email a {
+    margin: 0.5em 0;
+    font-size: 0.9em;
 }
