@@ -275,3 +275,8 @@ p {
 .hero-paragraph {
     width: 400px;
 }
+
+header nav {
+    position: relative;
+    left: calc((100% - 760px) / 2 + 1rem);
+}
