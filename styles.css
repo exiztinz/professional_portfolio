@@ -339,6 +339,16 @@ p {
     }
 }
 
+@media (max-width: 640px) {
+    .social-icons {
+        left: 0.25rem !important;
+    }
+
+    .vertical-email {
+        right: 0.25rem !important;
+    }
+}
+
 @media (max-width: 480px) {
     body {
         padding: 0.25rem;
