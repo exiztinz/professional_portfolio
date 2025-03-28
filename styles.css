@@ -346,11 +346,11 @@ p {
 
 @media (max-width: 640px) {
     .social-icons {
-        left: 0.25rem !important;
+        left: 0.20rem !important;
     }
 
     .vertical-email {
-        right: 0.25rem !important;
+        right: 0.20rem !important;
     }
 }
 
