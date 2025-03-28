@@ -298,6 +298,11 @@ p {
     width: 400px;
 }
 
+.social-icons,
+.vertical-email {
+    z-index: 1000;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     body {
