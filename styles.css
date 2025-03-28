@@ -68,13 +68,15 @@ header {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 2rem;
     color: var(--text-color);
+    background: var(--background-color);
 }
 
 .hero-video {
@@ -86,6 +88,12 @@ header {
     object-fit: cover;
     z-index: -1;
 }      
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
 
 .hero-content h1 {
     font-size: 5rem;
@@ -288,4 +296,87 @@ p {
 
 .hero-paragraph {
     width: 400px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .hero {
+        height: 60vh;
+        padding: 0 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .projects,
+    .about,
+    .contact {
+        padding: 3rem 1.5rem;
+    }
+
+    .projects h2,
+    .about h2,
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.25rem;
+        font-size: 0.85rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        height: 50vh;
+        padding: 0 0.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .projects,
+    .about,
+    .contact {
+        padding: 2rem 1rem;
+    }
+
+    .projects h2,
+    .about h2,
+    .contact h2 {
+        font-size: 1.8rem;
+    }
 }
