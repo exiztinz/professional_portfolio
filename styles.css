@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
 /* Reset & Global Styles */
 * {
     margin: 0;
@@ -15,7 +17,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Fira Code', monospace;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -31,11 +33,11 @@ a {
 /* Navigation */
 header {
     position: fixed;
-    width: 100%;
     top: 0;
-    background: var(--header-background);
-    backdrop-filter: blur(10px);
-    z-index: 100;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
 }
 
 .navbar {
@@ -111,13 +113,23 @@ header {
 /* Projects Section */
 .projects {
     padding: 4rem 2rem;
-    background-color: var(--section-background);
+    background-color: #f5f5f5; /* lighter background for a cleaner look */
+    text-align: center;
 }
 
 .projects h2 {
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #333;
+}
+
+.projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-grid {
@@ -127,14 +139,16 @@ header {
 }
 
 .project-card {
-    background: #222;
+    background: #fff;
     border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .project-card img {
@@ -197,7 +211,7 @@ footer {
 }
 
 .projects, .about, .contact {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 50px;
 }
 
 /* Improved Readability and Contrast */
@@ -274,9 +288,4 @@ p {
 
 .hero-paragraph {
     width: 400px;
-}
-
-header nav {
-    position: relative;
-    left: calc((100% - 760px) / 2 + 1rem);
 }

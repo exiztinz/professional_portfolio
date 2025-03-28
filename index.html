@@ -7,9 +7,6 @@
     <title>Joseph Tascona – Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts (Inter used in many modern designs) -->
-    <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
 </head>
 
@@ -17,7 +14,7 @@
     <!-- Navigation Bar -->
     <header class="bg-black">
         <div class="container mx-auto px-4">
-            <nav class="flex items-center justify-start p-4">
+            <nav class="flex items-center justify-center p-4">
                 <ul class="flex space-x-4">
                     <li><a href="#hero" class="text-white hover:underline">Home</a></li>
                     <li><a href="#projects" class="text-white hover:underline">Projects</a></li>
@@ -39,8 +36,8 @@
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <!-- Hero text container with animate-up class -->
         <div id="hero-text"
-            class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-            <div class="container mx-auto px-4">
+            class="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
+                <div class="max-w-5xl mx-auto px-4">
                 <div class="hero-content text-left">
                     <p>Hey there!, I'm-</p>
                     <h1 class="text-4xl md:text-6xl font-bold tracking-wide antialiased drop-shadow-md mb-4">Joseph Tascona
@@ -67,11 +64,12 @@
                     <div class="project-card bg-white shadow-lg rounded overflow-hidden">
                         <img src="images/see-n-say-storymaker.png" alt="Project 1" class="w-full">
                         <div class="p-4">
-                            <h3 class="text-xl text-black font-semibold mb-2">Project Title</h3>
-                            <p class="text-gray-700 mb-4">A brief description of the project goes here.</p>
+                            <h3 class="text-xl text-black font-semibold mb-2">See N' Say Storymaker</h3>
+                            <p class="text-gray-700 mb-4">A simple app that replicates the toy, by putting together random words through buttons, and it has the ability to say
+                            the sentence.</p>
                             <div class="flex space-x-4">
-                                <a href="#" class="text-blue-600 hover:underline">Live Demo</a>
-                                <a href="#" class="text-blue-600 hover:underline">GitHub</a>
+                                <a href="https://see-n-say-storymaker.onrender.com/" target="_blank" class="text-blue-600 hover:underline">Live Demo</a>
+                                <a href="https://github.com/josephtascona/client-side-javascript-assignment1" class="text-blue-600 hover:underline">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -88,7 +86,9 @@
                 <img src="images/linkedin_profile_picture.jpeg" alt="Your Profile Picture" class="w-40 h-40 rounded-full mb-6">
                 <div class="about-text">
                     <h2 class="text-4xl font-semibold tracking-wide antialiased drop-shadow-md mb-4">About Me</h2>
-                    <p class="text-gray-700">A short bio about your background, your passion for front-end development, and what sets you apart.</p>
+                    <p class="text-gray-700">Software developer with a 4.0 GPA and more than 1.5 years co-op experience at a government agency. Skilled in full-stack
+                    development, DevOps, and data analysis using tools like Azure, React, and SQL. Passionate about building scalable
+                    applications and contributing to meaningful projects. Fluent in both English and French.</p>
                 </div>
             </div>
         </div>
@@ -107,10 +107,10 @@
 
     <!-- Social Icons Fixed at Bottom Left -->
     <div class="fixed bottom-0 left-10 m-4 flex flex-col items-center space-y-2 social-icons">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/josephtascona" target="_blank" rel="noopener noreferrer">
             <img src="images/github.svg" alt="GitHub" class="w-6 h-6 hover:opacity-75 transition duration-300">
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/joseph-tascona/" target="_blank" rel="noopener noreferrer">
             <img src="images/linkedin.svg" alt="LinkedIn" class="w-6 h-6 hover:opacity-75 transition duration-300">
         </a>
         <!-- Vertical line extending upward -->

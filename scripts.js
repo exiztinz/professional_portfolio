@@ -128,3 +128,19 @@ window.addEventListener('load', () => {
         cycleWords(heroP, phrases, 2000);
     }
 });
+
+// Hide navbar on scroll down and show on scroll up
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down: hide header
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling up: show header
+        header.style.transform = 'translateY(0)';
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile or negative scrolling
+});
