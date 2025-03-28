@@ -379,4 +379,22 @@ p {
     .contact h2 {
         font-size: 1.8rem;
     }
+
+    .hero-paragraph {
+        width: auto !important;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero {
+        height: 40vh;
+        padding: 0 0.5rem;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .hero-content p {
+        font-size: 0.8rem;
+    }
 }
