@@ -20,7 +20,18 @@ window.addEventListener('load', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (!targetElement) return;
+
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        const elementTop = targetElement.getBoundingClientRect().top + currentScroll;
+        const direction = elementTop > currentScroll ? "down" : "up";
+        const offset = direction === "down" ? 20 : -40;
+
+        window.scrollTo({
+            top: elementTop + offset,
             behavior: 'smooth'
         });
     });
